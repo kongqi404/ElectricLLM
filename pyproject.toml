@@ -1,0 +1,23 @@
+[project]
+name = "ElectricLLM"
+version = "0.0.1"
+authors = [{name = "kongqi", email = "kongqiahaha@gmail.com"},]
+requires-python = ">=3.10"
+dependencies = [
+    "torch>=2.0.0",
+    "langchain",
+    "chromadb",
+    "transformers",
+    "peft",
+    "accelerate",
+    "huggingface_hub",
+]
+description = "电力大语言模型"
+[project.urls]
+"Homepage" = "https://github.com/kongqi404/ElectricLLM"
+
+[tool.setuptools.packages.find]
+exclude = ["tests*",]
+
+[project.scripts]
+timeseries = "timeseries.__main__:main"
